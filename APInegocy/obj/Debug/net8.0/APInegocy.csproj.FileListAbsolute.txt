@@ -71,3 +71,4 @@ C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.genruntimeconfig.cache
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\ref\APInegocy.dll
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.sourcelink.json
+C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
