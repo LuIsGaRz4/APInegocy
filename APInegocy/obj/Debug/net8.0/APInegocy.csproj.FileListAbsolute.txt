@@ -64,10 +64,10 @@ C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticweba
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.csproj.Up2Date
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.dll
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\refint\APInegocy.dll
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.pdb
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.genruntimeconfig.cache
 C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\ref\APInegocy.dll
+C:\Users\LuIs GaRzA\source\repos\APInegocy\APInegocy\obj\Debug\net8.0\APInegocy.sourcelink.json

@@ -2,12 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // 🔹 Add services to the container
 builder.Services.AddControllers();
 
+// 🔹 CORS: permitir todo (opcional, seguro para pruebas)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// 🔹 Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -18,39 +29,38 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-
-// 🔥 1️⃣ REGISTRAR DB CONTEXT
+// 🔥 DB CONTEXT
 builder.Services.AddDbContext<NegocyDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    )
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// 🔥 2️⃣ REGISTRAR REPOSITORY
+// 🔥 REPOSITORY
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-// 🔥 3️⃣ REGISTRAR SERVICE LAYER
+// 🔥 SERVICE LAYER
 builder.Services.AddScoped(typeof(IServiceManager<>), typeof(ServiceManager<>));
-
 
 var app = builder.Build();
 
-
-// 🔹 Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// 🔹 Swagger en desarrollo y producción (opcional)
+app.UseSwagger();
+app.UseSwaggerUI(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Negocy API v1");
-    });
-}
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Negocy API v1");
+});
 
-app.UseHttpsRedirection();
+// 🔹 CORS
 app.UseCors("AllowAll");
+
+// 🔹 Render NO necesita HTTPS obligatorio
+// app.UseHttpsRedirection(); // comentar para Render
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+// 🔹 Escuchar puerto asignado por Render
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls.Add($"http://*:{port}");
 
 app.Run();
