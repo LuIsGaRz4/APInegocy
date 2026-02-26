@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APInegocy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+858be6e34a81b334a3965b5179bd1c2c29388be3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd398ccb7c7f8b121332752526660511e8af0300")]
 [assembly: System.Reflection.AssemblyProductAttribute("APInegocy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APInegocy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
